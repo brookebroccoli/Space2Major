@@ -21,16 +21,6 @@ print "Connected to UR5!"
 # Need to find these positions in the Lab. These are set positions in m, rad
 PhotoPosition = [0.36985, -0.38075, 0.65190, 0.047, 3.1478, 0.015]
 ContainerPosition = [0.222167, 0.13817, 0.47490, 2.382, -2.056, 0.018]
-#print "Starting MoveToObject Function"
-#MoveToPose(PhotoPosition)
-#time.sleep(6)
-
-x   = PhotoPosition[0]
-y   = PhotoPosition[1]
-z   = PhotoPosition[2]
-rx  = PhotoPosition[3]
-ry  = PhotoPosition[4]
-rz  = PhotoPosition[5]
 
 print "UR5 moving to Photo Position"
 s.send ("movej(p[0.36985,-0.38075,0.65190,0.047,3.1478,0.015], a=1, v=1)" + "\n")

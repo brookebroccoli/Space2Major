@@ -10,7 +10,7 @@ from UR5Movement import *
 # Used as MoveCommand.MoveToPose(1,1,1,0,0,0)
 
 
-HOST = "192.168.0.100"      # The remote host
+HOST = "192.168.0.100"      # The remote host which is the Robot
 PORT = 30002                # The same port as used by the server
 
 # For compilation purposes
