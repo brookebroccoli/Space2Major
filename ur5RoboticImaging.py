@@ -15,7 +15,8 @@ def server(HOST_IP, PORT_NUM):
 def movejp(pose,a=0.1,v=0.5,t=0,r=0):
     script = "movej(p[{},{},{},{},{},{}], a={}, v={}, t={}, r={})"
     script = script.format(pose[0], pose[1], pose[2], pose[3], pose[4], pose[5], a, v, t, r)
-    s.send(bytes(script, 'utf-8') + bytes("\n", 'utf-8'))
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # added by me
+    s.send( bytes(script, 'utf-8') + bytes("\n", 'utf-8') )
     time.sleep(0.5)
 
 def movel(position,a=0.1,v=0.5,t=0,r=0):

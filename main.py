@@ -10,8 +10,8 @@ from UR5Movement import *
 # Used as MoveCommand.MoveToPose(1,1,1,0,0,0)
 
 
-HOST = "192.168.0.10"   # The remote host
-PORT = 30002            # The same port as used by the server
+HOST = "192.168.0.100"      # The remote host
+PORT = 30002                # The same port as used by the server
 
 # For compilation purposes
 x = 1
@@ -19,8 +19,8 @@ y = 1
 z = 1
 
 # Need to find these positions in the Lab. These are set positions
-HomePosition        = [x, y, z]
-PhotoPosition       = [x, y, z]
+#HomePosition        = [x, y, z]
+PhotoPosition       = [369.85, -380.75, 651.90, 0.047, 3.1478, 0.015]
 ContainerPosition   = [x, y, z]
 
 # Establish the connection to the UR5
@@ -36,7 +36,7 @@ count   = 1
 # First find the photo positon coordinates - manually move
 # Now assign this as the photo position as a POSE (coords + angles)
 # Move the UR5 there - using MoveToPose
-#MoveToPose(PhotoPosition,0,0,0)
+MoveToPose(PhotoPosition)
 
 
 ### Rock finding(rockinvalid[]) (Elle)
